@@ -1,0 +1,18 @@
+from pprint import pprint
+
+a = [1,2,3, [1,4,5, [7,8,9,[[[[[[[[[[[[8]]]]]]]]]]]]]]]
+
+def flaten(array):
+    
+    x = []
+    for i in array:
+        if isinstance(i, list):
+            x.extend(flaten(i))
+        else:
+            x.append(i)
+    
+    return x
+
+
+
+pprint(flaten(a))
