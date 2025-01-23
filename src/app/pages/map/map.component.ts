@@ -1,24 +1,34 @@
-import { DOCUMENT } from '@angular/common';
-import { Component, Inject, OnInit, Renderer2 } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { MapService } from '../../services/map.service';
+import { KeyValuePipe } from '@angular/common';
 
 @Component({
   selector: 'app-map',
-  imports: [],
+  imports: [KeyValuePipe],
   templateUrl: './map.component.html',
   styleUrl: './map.component.scss'
 })
-export class MapComponent implements OnInit {
+export class MapComponent {
 
-  constructor() { }
+  public countryDetails: any = {}
 
-  public ngOnInit() {
+  mapService = inject(MapService)
 
+  isObject(value: any): boolean {
+    return value && typeof value === 'object' && !Array.isArray(value);
   }
-  handleMouseClick(event: MouseEvent) {
+
+  isEmpty(value: object) {
+    return Object.keys(value).length === 0
+  }
+
+  async handleMouseClick(event: MouseEvent) {
 
     const target = event.target as HTMLElement; // Explicitly cast target to HTMLElement
 
     if (target.nodeName === 'path') {
+      this.countryDetails = await this.mapService.getCountryDetails(target.id)
+      console.log(this.countryDetails);
 
     }
   }

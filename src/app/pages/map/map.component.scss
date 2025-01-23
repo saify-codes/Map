@@ -1,3 +1,10 @@
 svg path:hover{
     fill: #F00;
 }
+
+.details{
+    position: sticky;
+    top: 2rem;
+    max-height: 500px;
+    overflow: auto;
+}
