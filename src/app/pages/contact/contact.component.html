@@ -1,0 +1,90 @@
+<div class="web-form-container">
+  <section class="web-form-section py-5">
+    <div class="container">
+      <h1 class="text-center mb-4">Contact Us</h1>
+      <p class="text-center mb-5">
+        Have a question? Fill out the form below and we’ll get back to you as
+        soon as possible.
+      </p>
+
+      <!-- Form Start -->
+      <form (ngSubmit)="submitForm()">
+        <div class="row">
+          <!-- First Name -->
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="first-name">First Name</label>
+              <input
+                type="text"
+                id="first-name"
+                class="form-control"
+                [(ngModel)]="firstName"
+                name="firstName"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Last Name -->
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="last-name">Last Name</label>
+              <input
+                type="text"
+                id="last-name"
+                class="form-control"
+                [(ngModel)]="lastName"
+                name="lastName"
+                required
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            class="form-control"
+            [(ngModel)]="email"
+            name="email"
+            required
+          />
+        </div>
+
+        <!-- Confirm Email -->
+        <div class="form-group">
+          <label for="confirm-email">Confirm Email Address</label>
+          <input
+            type="email"
+            id="confirm-email"
+            class="form-control"
+            [(ngModel)]="confirmEmail"
+            name="confirmEmail"
+            required
+          />
+        </div>
+
+        <!-- Question Text Area -->
+        <div class="form-group">
+          <label for="question">Your Question</label>
+          <textarea
+            id="question"
+            class="form-control"
+            [(ngModel)]="question"
+            name="question"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</div>

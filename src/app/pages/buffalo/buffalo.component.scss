@@ -1,0 +1,65 @@
+// Global Styles for City Pages
+
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$white-color: #ffffff;
+$light-gray: #f8f9fa;
+$dark-color: #343a40;
+
+.city-container {
+  // Hero Section
+  .city-hero-section {
+    background: url('/assets/images/buffalo.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 100px 0;
+    color: $white-color;
+    .display-4 {
+      font-weight: bold;
+    }
+    .lead {
+      font-size: 1.5rem;
+    }
+  }
+
+  // City Info Section
+  .city-info-section {
+    padding: 50px 0;
+    .text-center {
+      margin-bottom: 30px;
+    }
+    img {
+      max-height: 300px;
+      object-fit: cover;
+    }
+  }
+
+  // City Details Section
+  .city-details-section {
+    background-color: $light-gray;
+    .fact-card {
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+      h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: $dark-color;
+      }
+      p {
+        font-size: 1rem;
+        color: $secondary-color;
+      }
+      i {
+        color: $primary-color;
+      }
+    }
+  }
+}

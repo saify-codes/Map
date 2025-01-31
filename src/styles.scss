@@ -1,0 +1,119 @@
+/* General Navbar Styling */
+.navbar {
+  background-color: #f8f9fa; /* Light background color */
+  padding: 10px 0; /* Vertical padding */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for navbar */
+}
+
+/* Navbar brand (Logo) */
+.navbar-brand img {
+  height: 50px;
+  object-fit: contain;
+  margin-right: 15px;
+}
+
+/* Navbar link styling */
+.navbar-nav .nav-item .nav-link {
+  font-size: 1rem;
+  color: #495057; /* Dark color for text */
+  padding: 10px 20px;
+  text-transform: uppercase;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover effect for links */
+.navbar-nav .nav-item .nav-link:hover {
+  color: #007bff; /* Blue color for active links */
+  background-color: #e9ecef; /* Light background for hover */
+  border-radius: 5px;
+}
+
+/* Active class for navbar items */
+.navbar-nav .nav-item .nav-link.active {
+  color: #007bff; /* Active link color */
+}
+
+/* Right-side elements (dropdowns and notifications) */
+.d-flex.align-items-center {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Dropdown Menu for notifications */
+.dropdown-menu {
+  min-width: 200px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Dropdown shadow */
+}
+
+/* Badge for notifications */
+.badge-notification {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: red;
+  color: white;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 50%;
+}
+
+/* Avatar Dropdown */
+#navbarDropdownMenuAvatar {
+  display: flex;
+  align-items: center;
+}
+
+#navbarDropdownMenuAvatar img {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+
+/* Dropdown menu for Avatar */
+.dropdown-menu-end {
+  right: 0 !important; /* Align dropdown to the right */
+  left: auto !important;
+}
+
+/* Navbar Toggler (Collapse button for mobile view) */
+.navbar-toggler {
+  border: none;
+  background-color: transparent;
+  padding: 10px;
+}
+
+.navbar-toggler .fas.fa-bars {
+  color: #495057; /* Dark color for the toggle icon */
+}
+
+.float-right{
+    float: right;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  /* On smaller screens, navbar items will be collapsed */
+  .navbar-collapse {
+    background-color: #ffffff; /* White background for collapsed navbar */
+    border-top: 1px solid #e9ecef; /* Add border on top */
+  }
+
+  .navbar-nav {
+    margin-top: 10px; /* Add space between the logo and the links in collapsed navbar */
+  }
+
+  .navbar-nav .nav-item {
+    margin-right: 15px; /* Space between nav items */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Adjustments for mobile view */
+  .navbar-nav .nav-item .nav-link {
+    font-size: 0.9rem; /* Smaller font size for mobile */
+    padding: 8px 15px;
+  }
+}

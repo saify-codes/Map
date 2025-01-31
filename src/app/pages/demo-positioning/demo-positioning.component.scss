@@ -1,0 +1,48 @@
+.demo-positioning-container {
+  text-align: center;
+  margin-top: 50px;
+  font-family: Arial, sans-serif;
+
+  h2 {
+    color: #333;
+  }
+
+  .position-container {
+    position: relative; /* This makes sure the child absolute element is relative to this container */
+    margin: 30px auto;
+    height: 200px;
+    border: 2px solid #ddd;
+    padding: 20px;
+    display: inline-block;
+    width: 80%;
+    background-color: #f8f9fa;
+  }
+
+  /* Absolute positioning */
+  .absolute-box {
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    width: 250px;
+    height: 100px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  /* Relative positioning */
+  .relative-box {
+    position: relative;
+    top: 60px;
+    left: 30px;
+    width: 250px;
+    height: 100px;
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+}

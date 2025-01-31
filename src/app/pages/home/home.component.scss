@@ -1,0 +1,113 @@
+// Global Styles for Home Component
+
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$white-color: #ffffff;
+$dark-color: #343a40;
+$cta-bg-color: #212529; // Dark background color for CTA section
+
+.home-container {
+  // Hero Section
+  .hero-section {
+    background: url("/assets/images/nyc-hero.jpg") no-repeat center center;
+    background-size: cover;
+    padding: 150px 0;
+    color: $white-color;
+    .display-4 {
+      font-weight: bold;
+    }
+    .lead {
+      font-size: 1.25rem;
+    }
+    .btn-light {
+      background-color: $white-color;
+      color: $primary-color;
+      font-weight: bold;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      &:hover {
+        background-color: $primary-color;
+        color: $white-color;
+      }
+    }
+  }
+
+  // Features Section
+  .features-section {
+    .feature-card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 30px;
+      text-align: center;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+      h4 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: $dark-color;
+      }
+      p {
+        font-size: 1rem;
+        color: $secondary-color;
+      }
+    }
+  }
+
+  // About Section
+  .about-section {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+    .lead {
+      font-size: 1.25rem;
+      color: $secondary-color;
+    }
+  }
+
+  // Cities Section
+  .cities-section {
+    background-color: #f1f1f1;
+    padding: 50px 0;
+    h4 {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: $dark-color;
+    }
+    p {
+      font-size: 1rem;
+      color: $secondary-color;
+    }
+  }
+
+  // Testimonial Section
+  .testimonial-section {
+    padding: 50px 0;
+    blockquote {
+      font-size: 1.25rem;
+      font-style: italic;
+      border-left: 5px solid $primary-color;
+      margin-bottom: 30px;
+      padding-left: 20px;
+    }
+  }
+
+  // CTA Section
+  .cta-section {
+    background-color: $cta-bg-color;
+    color: $white-color;
+    padding: 50px 0;
+    .btn-light {
+      background-color: $white-color;
+      color: $cta-bg-color;
+      font-weight: bold;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      &:hover {
+        background-color: $cta-bg-color;
+        color: $white-color;
+      }
+    }
+  }
+}
